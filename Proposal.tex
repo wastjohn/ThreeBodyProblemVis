@@ -6,14 +6,24 @@
 \maketitle
 \section{Background}
 \subsection{The Three Body Problem}
-The Three Body Problem is a simplified version of the $n$-body problem, which is the problem of finding the motion of $n$ bodies interacting with each other through gravitational forces. The Three Body Problem is the special case of $n=3$. The Three Body Problem is a special case because it is the simplest case where the motion of the bodies cannot be solved analytically. The Three Body Problem is also interesting because it is the simplest case where the motion of the bodies is chaotic. 
+The three body problem is a classic application of Newtonian physics wherein the position and velocity of three bodies at some time are determined by their initial positions and velocities, their masses, and the gravitational constant G. In order to simplify this problem for an undergraduate project, we made the following simplifying assumptions: that all bodies have the same mass ($m=1$), that all planets start from rest, and that all three are acted upon by the same gravitational constant $G=6.67*10^{-11}$. Additionally, we will only be considering the three body problem in two dimensions, which also simplifies it for our purposes. 
+The Three Body Problem is a simplified version of the n-body problem, which is the problem of finding the motion of n bodies interacting with each other through gravitational forces. The Three Body Problem is the special case of n=3. The Three Body Problem is a special case because it is the simplest case where the motion of the bodies cannot be solved analytically. The Three Body Problem is also interesting because it is the simplest case where the motion of the bodies is chaotic.
+
 
 \subsection{Equations}
-The following equations describes the 
+The following three equations describe the three body problem. 
+\begin{align}
+    
+\end{align}
+
 
 \section{Goal}
+Our intended goal is to model the three body problem in the 2D plane for a range of initial conditions, using Heun’s Method. Once every approximation is complete, we would create a “moment map” of the result by averaging the amount of times a planet appears at a particular pixel and giving that pixel a corresponding RGB value. For example, a pixel where planet 1 (red) passes through numerous times would appear very dark red in the moment map, while a pixel where planet 1 (red) and 3 (blue) pass through a lot would appear purple.The steps towards this goal fall into two categories: those that we are certain we can achieve and those that are more ambitious.
 
+\section{Minimum Viable Product}
+The minimum viable product (MVP) of our project entails (1) rewritten equations for the three-body problem in two dimensions, (2) code in python to compute Heun’s equations for all 12 of the three-body equations, and (3) plots of three-body motion featuring all three bodies and the center of mass in Python. 
 
-\section{Minimum Value Product}
+\section{Overall Goal}
+Our more ambitious goals entail the creation of the RGB map synthesizing the motion of the three bodies over a variety of initial conditions in order to achieve a better understanding of how the bodies tend to move. 
 
 \end{document}
