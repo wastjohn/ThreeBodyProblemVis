@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{bm}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paper=a4paper]{geometry}
 \author{Caedan Miller, Kiki Murphy, Will St. John}
 \title{MATH 312 Final Project Proposal}
 
@@ -7,15 +9,15 @@
 \section{Background}
 \subsection{The Three Body Problem}
 The three body problem is a classic application of Newtonian physics wherein the position and velocity of three bodies at some time are determined by their initial positions and velocities, their masses, and the gravitational constant G. In order to simplify this problem for an undergraduate project, we made the following simplifying assumptions: that all bodies have the same mass ($m=1$), that all planets start from rest, and that all three are acted upon by the same gravitational constant $G=6.67*10^{-11}$. Additionally, we will only be considering the three body problem in two dimensions, which also simplifies it for our purposes. 
-The Three Body Problem is a simplified version of the n-body problem, which is the problem of finding the motion of n bodies interacting with each other through gravitational forces. The Three Body Problem is the special case of n=3. The Three Body Problem is a special case because it is the simplest case where the motion of the bodies cannot be solved analytically. The Three Body Problem is also interesting because it is the simplest case where the motion of the bodies is chaotic.
 
 
 \subsection{Equations}
-The following three equations describe the three body problem. 
-\begin{align}
-    
-\end{align}
-
+Taking $m_1=m_2=m_2=G=1$, the following vector equation describes the motion of a single planet in the three body problem.
+$$\ddot{\bm{r}}=\left(\begin{array}{c}\frac{d^2x}{dt^2} \\ \frac{d^2y}{dt^2}\end{array}\right)=\left(\begin{array}{c}
+    -\frac{x_1-x_2}{\left((x_2-x_1)^2 - (y_2-y_1)^2\right)^{3/2}} + -\frac{x_1-x_3}{\left((x_3-x_1)^2 - (y_3-y_1)^2\right)^{3/2}} \\
+    -\frac{y_1-y_2}{\left((x_2-x_1)^2 - (y_2-y_1)^2\right)^{3/2}} + -\frac{y_1-y_3}{\left((x_3-x_1)^2 - (y_3-y_1)^2\right)^{3/2}}
+\end{array}\right)$$
+Here $x_1$ and $y_1$ are the x and y coordinates of the planet in question, $x_2$ and $y_2$ are the x and y coordinates of the second planet, and $x_3$ and $y_3$ are the x and y coordinates of the third planet. The same equation can be written for the second and third planets by swapping the subscripts.
 
 \section{Goal}
 Our intended goal is to model the three body problem in the 2D plane for a range of initial conditions, using Heun’s Method. Once every approximation is complete, we would create a “moment map” of the result by averaging the amount of times a planet appears at a particular pixel and giving that pixel a corresponding RGB value. For example, a pixel where planet 1 (red) passes through numerous times would appear very dark red in the moment map, while a pixel where planet 1 (red) and 3 (blue) pass through a lot would appear purple.The steps towards this goal fall into two categories: those that we are certain we can achieve and those that are more ambitious.
