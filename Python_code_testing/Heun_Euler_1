@@ -21,31 +21,72 @@ def heun_mtd(y0, a, b, N):
 
 
 
-p0 = []
+def p0_vector(x1, x2, x3, y1, y2, y3, u1, u2, u3, v1, v2, v3):
+    p0 = np.zeros(12)
+    p0[0] = x1
+    p0[1] = x2
+    p0[2] = x3
+
+    p0[3] = y1
+    p0[4] = y2
+    p0[5] = y3
+
+    p0[6] = u1
+    p0[7] = u2
+    p0[8] = u3
+
+    p0[9] = v1
+    p0[10] = v2
+    p0[11] = v3
+
+    return p0
+
+
+
 
 def derivative(p0):
     dp = 0 ** p0
     dp = np.zeros(12)
-    dp[0] = p0[6]
-    dp[1] = p0[7]
-    de[2] = p0[8]
+    dp[0] = p0[6]       # u1
+    dp[1] = p0[7]       # u2
+    dp[2] = p0[8]       # u3
 
-    dp[11] = p0[0] - p0[1] 
+    dp[3] = p0[9]       # v1
+    dp[4] = p0[10]      # v2
+    dp[5] = p0[11]      # v3
+
+    dp[6] = -((p0[0] - p0[1]) / ((math.sqrt((p0[0] - p0[1])^2 + (p0[3] - p0[4])^2))^3)) -((p0[0] - p0[2]) / ((math.sqrt((p0[0] - p0[2])^2 + (p0[3] - p0[5])^2))^3))         # a_x1
+    dp[7] = -((p0[1] - p0[0]) / ((math.sqrt((p0[1] - p0[0])^2 + (p0[4] - p0[3])^2))^3)) -((p0[1] - p0[2]) / ((math.sqrt((p0[1] - p0[2])^2 + (p0[4] - p0[5])^2))^3))         # a_x2
+    dp[8] = -((p0[2] - p0[0]) / ((math.sqrt((p0[2] - p0[0])^2 + (p0[5] - p0[3])^2))^3)) -((p0[2] - p0[1]) / ((math.sqrt((p0[2] - p0[1])^2 + (p0[5] - p0[4])^2))^3))         # a_x3
+
+    dp[9] = -((p0[3] - p0[4]) / ((math.sqrt((p0[3] - p0[4])^2 + (p0[0] - p0[1])^2))^3)) -((p0[3] - p0[5]) / ((math.sqrt((p0[3] - p0[5])^2 + (p0[0] - p0[2])^2))^3))         # a_y1
+    dp[10] = -((p0[4] - p0[3]) / ((math.sqrt((p0[4] - p0[3])^2 + (p0[1] - p0[0])^2))^3)) -((p0[4] - p0[5]) / ((math.sqrt((p0[4] - p0[5])^2 + (p0[1] - p0[2])^2))^3))        # a_y2
+    dp[11] = -((p0[5] - p0[3]) / ((math.sqrt((p0[5] - p0[3])^2 + (p0[2] - p0[0])^2))^3)) -((p0[5] - p0[4]) / ((math.sqrt((p0[5] - p0[4])^2 + (p0[2] - p0[1])^2))^3))        #a_y3
+
+    return dp
 
 
 
 
 
-
-def heun(p0, N, t):
+def heun(p0, N, a, b, N):
     h = (b - a)/float(N-1)
     t = np.arange( a, b+h, h )
 
     df = Dataframe
 
     for i in range(1, N):
-        ptemp = 
-        p[i] = 
+        for i in p0:
+            ptemp = np.zeros(12)
+            p = np.zeros(12)
+            ptemp[i] = p0[i] + h ** derivative(p0[i])
+
+            p[i] = p0[i] + (h/2) ** (p0[i] + ptemp[i])
+
+            pass p
+        dataframe
+       
+       
         df2 = Dataframe
         dataframe.append
 
