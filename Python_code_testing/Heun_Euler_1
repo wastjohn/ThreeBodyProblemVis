@@ -1,6 +1,6 @@
 import math
 import numpy as np
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.animation as animation
 
@@ -81,3 +81,20 @@ def derivative(p0: np.array):
     p1[10] = - G * ((p0[4] - p0[3])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) - G * ((p0[4] - p0[5])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))
     p1[11] = - G * ((p0[5] - p0[3])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - G * ((p0[5] - p0[4])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
     return p1
+
+
+
+
+p = np.array([-1, 1, 0, 0, 0, 0, 0.080584, 0.080584, -0.161168, 0.532727, 0.532727, -1.065454])
+d = heun(p, 10000, 0.001)
+fig, ax = plt.subplots(figsize=(12, 12))
+
+ax.set_title("y vs x")
+ax.plot(d['P1: X Position'], d['P1: Y Position'], c='blue', marker='x', label='Earth')
+ax.plot(d['P2: X Position'], d['P2: Y Position'], c='red', marker='x',label='Mars')
+ax.plot(d['P3: X Position'], d['P3: Y Position'], c='orange', marker='x', label='Venus')
+ax.plot(d['P1: X Position'], d['P1: Y Position'], c='blue', alpha=0.3, label='Earth')
+ax.plot(d['P2: X Position'], d['P2: Y Position'], c='red', alpha=0.3, label='Mars')
+ax.plot(d['P3: X Position'], d['P3: Y Position'], c='orange', alpha=0.3, label='Venus')
+ax.legend()
+plt.show()
