@@ -7,7 +7,7 @@ import matplotlib.animation as animation
 G = 6.67430 * (10 ** (-11))
 print(G)
 
-def heun(p0: np.array, m:np.array, N: int, t: float) -> np.array:
+def heun(p0: np.array, m: np.array, N: int, t: float) -> np.array:
     """Calculatue heuns method for the three body problem for N steps with step size t.
 
     Args:
@@ -41,8 +41,8 @@ def heun(p0: np.array, m:np.array, N: int, t: float) -> np.array:
         dptemp = derivative(ptemp)
         p0 = p0 + t/2 * (dp0 + dptemp)
         data = [p0[0], p0[1], p0[2], p0[3], p0[4], p0[5], p0[6], p0[7], p0[8], p0[9], p0[10], p0[11], 
-            derivative(p0)[6], derivative(p0)[7], derivative(p0)[8], derivative(p0)[9], derivative(p0)[10], 
-            derivative(p0)[11]]
+            derivative(p0,m)[6], derivative(p0,m)[7], derivative(p0,m)[8], derivative(p0,m)[9], derivative(p0,m)[10], 
+            derivative(p0,m)[11]]
         df2 = pd.DataFrame(data=[data], columns=['P1: X Position', 'P2: X Position', 
                                 'P3: X Position', 'P1: Y Position', 'P2: Y Position', 
                                 'P3: Y Position', 'P1: X Velocity', 'P2: X Velocity', 
@@ -68,7 +68,7 @@ def heun(p0: np.array, m:np.array, N: int, t: float) -> np.array:
     return df
 
 
-def derivative(p0: np.array):
+def derivative(p0: np.array,m:np.array):
     p1 = 0 * p0
     p1[0] = p0[6]
     p1[1] = p0[7]
