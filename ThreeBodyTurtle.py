@@ -86,10 +86,10 @@ def derivative(p0: np.array):
 
 
 
-def path(p, N, t):
+def path(p, N, t, x_var, y_var):
     H = heun(p, N, t)
-    x = H['P1: X Position']
-    y = H['P1: Y Position']
+    x = H[x_var]
+    y = H[y_var]
     
     x_path = np.zeros((N,))
     y_path = np.zeros((N,))
@@ -98,7 +98,11 @@ def path(p, N, t):
 
     for i in range(0, N):
         x_path[i] = x[i+1] - x[i]
+        x_path[i] = x_path[i] * 1
+
         y_path[i] = y[i+1] - x[i]
+        y_path[i] = y_path[i] * 1
+
         hyp[i] = math.sqrt((x_path[i])**2 + (y_path[i])**2)
         angle[i] = math.tan((y_path[i])/(x_path[i]))
     
@@ -106,26 +110,25 @@ def path(p, N, t):
 
 
 
-def moveTogether(body, p, N, t):
+def moveTogether(body, p, N, t, x_var, y_var):
     speed = body.speed()
     body.pendown()
 
-    hyp, angle = path(p, N, t)
+    hyp, angle = path(p, N, t, x_var, y_var)
 
-    
-    for i in range(hyp):
-        for j in range(0, hyp, speed):
-            body.forward(speed)
-            body.right(angle)
-            yield(0)
+    for (i,j) in zip(hyp, angle):
+        body.forward(i)
+        body.right(j)
+        yield(0)
     
     body.penup()
 
 
 def draw(p, N, t):
-    motion1 = moveTogether(body1, p, N, t)
-    motion2 = moveTogether(body2, p, N, t)
-    motion3 = moveTogether(body3, p, N, t)
+    
+    motion1 = moveTogether(body1, p, N, t, 'P1: X Position', 'P1: Y Position')
+    motion2 = moveTogether(body2, p, N, t, 'P2: X Position', 'P2: Y Position')
+    motion3 = moveTogether(body3, p, N, t, 'P3: X Position', 'P3: Y Position')
 
     while (next(motion1, 1) + next(motion2, 1) + next(motion3, 1) < 3):
         pass
