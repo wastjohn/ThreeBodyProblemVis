@@ -86,7 +86,7 @@ def derivative(p0: np.array):
 
 
 
-def path(p, N, t, x_var, y_var):
+def path2(p, N, t, x_var, y_var):
     H = heun(p, N, t)
     x = H[x_var]
     y = H[y_var]
@@ -94,19 +94,43 @@ def path(p, N, t, x_var, y_var):
     x_path = np.zeros((N,))
     y_path = np.zeros((N,))
     hyp = np.zeros((N,))
+    ang_temp = np.zeros((N,))
     angle = np.zeros((N,))
 
     for i in range(0, N):
         x_path[i] = x[i+1] - x[i]
-        x_path[i] = x_path[i] * 1
+        x_path[i] = x_path[i] * 200
 
-        y_path[i] = y[i+1] - x[i]
-        y_path[i] = y_path[i] * 1
+        y_path[i] = y[i+1] - y[i]
+        y_path[i] = y_path[i] * 200
 
         hyp[i] = math.sqrt((x_path[i])**2 + (y_path[i])**2)
-        angle[i] = math.tan((y_path[i])/(x_path[i]))
+
+        # if x_path[i] > 0 and y_path[i] > 0:
+        #     hyp[i] = math.sqrt((x_path[i])**2 + (y_path[i])**2)
+        # else:
+        #     hyp[i] = - math.sqrt((x_path[i])**2 + (y_path[i])**2)
+
+
+    if y_path[0] > 0:
+            ang_temp[0] = math.degrees(math.acos(((x_path[0])**2 + (hyp[0])**2 - (y_path[0])**2)/(2 * (x_path[0]) * (hyp[0]))))
+    else:
+            ang_temp[0] = - math.degrees(math.acos(((x_path[0])**2 + (hyp[0])**2 - (y_path[0])**2)/(2 * (x_path[0]) * (hyp[0]))))
+    angle[0] = ang_temp[0]
+
+    for i in range(1, N):
+        m = (x_path[i])**2 + (hyp[i])**2 - (y_path[i])**2
+
+        if y_path[i-1] > 0:
+            ang_temp[i] = math.degrees(math.acos(m/(2 * (x_path[i]) * (hyp[i]))))
+        else:
+            ang_temp[i] = - math.degrees(math.acos(m/(2 * (x_path[i]) * (hyp[i]))))
+
+        angle[i] = ang_temp[i] - ang_temp[i-1]
+        
     
-    return hyp, angle
+    return hyp, angle, x, y
+    
 
 
 
@@ -114,14 +138,21 @@ def moveTogether(body, p, N, t, x_var, y_var):
     speed = body.speed()
     body.pendown()
 
-    hyp, angle = path(p, N, t, x_var, y_var)
+    hyp, angle, x, y = path2(p, N, t, x_var, y_var)
+
+    body.penup()
+    body.setposition(x[0]*200, y[0]*200)
+    # print(body.position())
+    body.pendown()
 
     for (i,j) in zip(hyp, angle):
+        body.left(j)
         body.forward(i)
-        body.right(j)
         yield(0)
     
     body.penup()
+
+
 
 
 def draw(p, N, t):
@@ -135,7 +166,7 @@ def draw(p, N, t):
 
 
 p = np.array([-1, 1, 0, 0, 0, 0, 0.347113, 0.347113, -0.694226, 0.532727, 0.532727, -1.065454])
-draw(p, 3000, 0.001)
+d = draw(p, 3000, 0.001)
 
 
 win.exitonclick()

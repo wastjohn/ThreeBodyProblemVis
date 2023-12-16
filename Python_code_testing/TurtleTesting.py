@@ -1,4 +1,6 @@
 import turtle
+import pandas as pd
+import numpy as np
 
 """This is soemthing I found online of two turtles racing each other
 
@@ -69,10 +71,46 @@ import turtle
 # screen.exitonclick()
 
 
-screen = turtle.Screen()
-turt = turtle.Turtle()
+# screen = turtle.Screen()
+# turt = turtle.Turtle()
+# turt.speed(1)
+
+
+# turt.left(-120)
+# turt.forward(90)
 
 
 
 
-screen.exitonclick()
+# screen.exitonclick()
+
+
+# df = pd.DataFrame()
+
+# d2 = [1, 2, 3, 4]
+# df2 = pd.DataFrame([d2], columns = ['a', 'b', 'c', 'd'])
+
+# d3 = [5, 6, 7, 8]
+# df3 = pd.DataFrame([d3], columns = ['a', 'b', 'c', 'd'])
+
+# df = pd.concat([df2, df3], ignore_index=True)
+
+
+
+df = pd.DataFrame()
+
+x = [1, 2, 3, 4]
+y = [10, 20, 30, 40]
+
+n = np.zeros((4,))
+
+for i in range(0, 4):
+    n[i] = x[i] + y[i]
+    d = [n[i], x[i], y[i]]
+    df2 = pd.DataFrame([d], columns=['n', 'x', 'y'])
+    df = pd.concat([df, df2], ignore_index=True)
+
+
+print(df)
+
+
