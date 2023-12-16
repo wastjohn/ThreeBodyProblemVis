@@ -5,6 +5,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import matplotlib.animation as animation
 
+"""This is the document that makes the three body animations
+
+The other files are just me trying to figure out turtle and the paths/angles needed.
+
+The infinity sign example is already in here, but if you guys want to test more, go ahead."""
+
 
 win = turtle.Screen()
 
