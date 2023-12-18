@@ -17,14 +17,17 @@ win = turtle.Screen()
 body1 = turtle.Turtle()
 body1.hideturtle()
 body1.color("red")
+body1.speed(0)
 
 body2 = turtle.Turtle()
 body2.hideturtle()
 body2.color("blue")
+body2.speed(0)
 
 body3 = turtle.Turtle()
 body3.hideturtle()
 body3.color("green")
+body3.speed(0)
 
 
 def heun(p0: np.array, N: int, t: float) -> np.array:
