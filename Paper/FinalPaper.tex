@@ -74,6 +74,12 @@ Equations (1), (2), and (3) can be rewritten as follows:
     \ddot{r_2} &= -\frac{r_2-r_1}{|r_2-r_1|^3}-\frac{r_2-r_3}{|r_2-r_3|^3}\\
     \ddot{r_3} &= -\frac{r_3-r_1}{|r_3-r_1|^3}-\frac{r_3-r_2}{|r_3-r_2|^3}
 \end{align}
+While these equations are already much more reasonable to work with, three body systems are still incredibly unstable with the added dependence on the mass ratio between the bodies, which influences the motion and can prevent symmetry within the problem. In addition, the gravitational constant that is used in astronomy is such a small number that we have to scale everything up so that there is still an attractive force between the bodies strong enough to influence each other. Because of this, we simplified these six motion equations even further by taking the mass of each body to be 1, and used a gravitational constant of 1. 
+\begin{itemize}
+    \item The three bodies only move in two dimensions.
+    \item The three bodies are of equal mass $m_1 = m_2 = m_3 = 1$.
+    \item The gravitational constant $G = 1$.
+\end{itemize}
 
 \subsection{Goals}
 Our intended goal was to model the three body problem in the 2D plane for a range of initial conditions using Heun's Method. Once every approximation is complete, we would create a “moment map” of the result by averaging the amount of times a planet appears at a particular pixel and giving that pixel a corresponding RGB value. For example, a pixel where planet 1 (red) passes through numerous times would appear very dark red in the moment map, while a pixel where planet 1 (red) and 3 (blue) pass through a lot would appear purple.The steps towards this goal fall into two categories: those that we are certain we can achieve and those that are more ambitious.
@@ -93,6 +99,8 @@ import random
 \end{verbatim}
 
 \subsubsection{Heun's Method}
+To rewrite Heun’s Method in Python for this system of twelve differential equations, and ultimately solve for x and y position values for each body, we used what we know of simple Newtonian physics. We recognized that the equations we wrote for the three body problem in two dimensions were acceleration equations because they were time independent. To find the respective velocity and position, we only needed to take the first and second derivatives of the acceleration equations with respect to time. 
+We applied this to Heun’s Method in one dimension by writing two functions— a Heun’s Method function, and a derivative function— and finding the resulting vector of positions and velocities of all the bodies after each step. The Heun’s Method function takes in a 12 dimensional p0 array that contains the initial positions and velocities for all bodies, and sets up a Dataframe to collect the position, velocity, and acceleration values of each after each step. For each step, the function calculates the derivative of the vector using the derivative function, and finds values for p_temp and the derivative of p_temp. It then reassigns the p0 vector to include the new values for position and velocity. The function also adds this data to a Dataframe so we can access the position, velocity, and acceleration points for each iteration. 
 \begin{verbatim}
 def heun(p0: np.array, N: int, t: float) -> np.array:
     """Calculatue heuns method for the three body problem for N steps with step size t.
@@ -153,6 +161,8 @@ def heun(p0: np.array, N: int, t: float) -> np.array:
 \end{verbatim}
 
 \subsubsection{Derivative}
+While the Heun’s Method function is ultimately what allows us to model the three body problem with position and velocity points, the derivative function is just as important for the physics of the system. This function takes in the same 12 dimensional p0 vector that Heun’s Method does and it creates a new 12 dimensional p1 vector of the velocities and accelerations. Since the velocity values are already a part of the p0 vector, the derivative only reassigns those same values to the p1 vector. To find the accelerations for each body we use the rewritten time-independent three body equations, using the position values from the p0 vector. The derivative function then returns the p1 vector that we can use in Heun’s Method. 
+
 \begin{verbatim}
 def derivative(p0: np.array) -> np.array:
     """Calculates the derivative of the 12 dimensional vector p0.
@@ -283,6 +293,8 @@ def generate_avg(pert: int, pos: int, duration: int, stepsize: float) -> None:
 \end{verbatim}
 
 \subsection{Adding Masses \& G}
+At one point, we wanted to better modify our simulations to account for the mass of the planets and the gravitational constant G. To do this, we added a vector of the three bodies' respective masses into the input for Heun’s method and the derivative functions and then incorporated the masses into the calculations within the functions. We were able to verify that this produced the same results as our original simplified code by executing it with masses of 1/G. After this, we then attempted to create more accurate simulations of astronomical phenomena, specifically the earth-moon-sun system of gravitational interactions. However, this was largely unsuccessful. With the earth-moon-sun system specifically, the distance between the earth and moon is small compared to the distance between the earth and the sun, and even if the relative masses are scaled down as far as possible, the sun is so much more massive than the moon that it was too difficult to produce any valuable plots with the code that we were using. 
+	Additionally, the magnitude of G is so small that any realistic astronomical simulations would have to feature enormous masses and very long distances, two factors that not only make it very difficult to create readable plots but would force us to use more complicated initial velocities when modeling stable conditions. This led us to abandon the idea of accounting for mass and gravity within our main project and stick with our simplified three body problem. 
 
 \subsection{Exploring Collinear Initial Conditions}
 Three body systems are already prone to instability, so finding stable three body systems was difficult. In these cases, we discovered that the motion would tend to simplify in one of two ways. The first of these was that the three body system would almost immediately simplify to a two body system, with the third body orbiting the other two. In the other case, two of the three bodies would crash into each other, flinging both of them away from the rest of the system. 
