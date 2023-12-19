@@ -201,6 +201,7 @@ def derivative(p0: np.array) -> np.array:
 \end{verbatim}
 When we first started thinking through how we were going to solve Heun’s Method for these two systems of 12 equations, we were overwhelmed by how complicated this seemed. In our first attempts we tried to use Heun’s Method in two dimensions and then somehow solve for the extra variables what we knew about physics. Ultimately we didn’t get very far with this approach. The problem became much more simple when we started thinking of these 12 differential equations that seemed to all depend on each other as less of a system of equations and more as a set of independent points that made up one big vector. By changing our perspective, we were also able to incorporate what we know about Newtonian physics to relate the time-independent acceleration equations to the position and velocity values we cared about, something we were not able to do before. This also allowed us to simplify Heun’s Method to only depend on one variable instead of two, which both made the code shorter and made the three body problem easier to understand. 
 \subsubsection{Perterbations}
+This is the code we used to randomly generate perturbations in the central body's positioning. It generates random points in the xy plane within the parameters $-0.1 \leq x \leq 0.1$ and $0 \leq y \leq 0.1$.
 \begin{verbatim}
 def perterbations(N: int) -> list:
     """Randomly generates N positions within the first two quadrants of a circle 
@@ -222,6 +223,7 @@ def perterbations(N: int) -> list:
 \end{verbatim}
 
 \subsubsection{Making Plots}
+Here is the code we used to create the graphs for the motion of the three body system for some number of perturbations with the same number of steps and step size. As we increase the number of perturbations, the code gets exponentially longer to run and display the plots. 
 \begin{verbatim}
     def make_vis(pos: int, pert: int, title: str) -> None:
     """Creates a visualization of the three body problem with pert perturbations. Indended 
@@ -256,6 +258,7 @@ def perterbations(N: int) -> list:
 \end{verbatim}
 
 \subsubsection{Making Average Plots}
+The following code generates a number of perturbations and creates a dataframe of those perturbations run for the same duration with the same number of steps. From that dataframe, it creates a plot of the perturbations and a plot of the average position of the three bodies across all the perturbations. 
 \begin{verbatim}
 def generate_avg(pert: int, pos: int, duration: int, stepsize: float) -> None:
     """Creates an average of pert perterbations using Heun's method 
@@ -338,6 +341,9 @@ In our modeling of the three body problem we used these same parameters, only ch
     \includegraphics[width=0.8\textwidth]{Images/averages1to100.png}
     \caption{Numerical solution to the three body problem with 1 to 100 perturbations, averaged together.}
 \end{figure}
+By plotting the average position of the planets over many perturbations, we see that the two outer planets remain in a roughly elliptical orbit around the center planet, which remains near the center. When more perturbations are averaged, the center planet will deviate less and less from its initial position, as any random tendencies are balanced out.
+
+Overall, a quality inherent within the collinear initial configuration is its symmetry, both rotational and local. If the plot of a given perturbation is rotated a certain number of degrees about the center, it will produce a solution similar to that which would be produced if the initial conditions were rotated that same number of degrees. Additionally, perturbations close together will produce orbits that are also close together, the only exception being perturbations on different sides of the y-axis. 
 
 Through many perturbations, we gleaned a variety of insights into the behavior of the three body problem under these collinear initial conditions. Firstly, the planet on whichever side is closest to the center planet will be attracted to the center planet and they will spiral around each other, while the third planet will rotate distantly around the other two. Within the shorter time period of most of our plots, it appears that the third planet accelerates off into space, but when we ran one perturbation for a very long time, the third planet remained within the picture the entire time. Thus, the long-term behavior does not indicate the loss of the third planet. 
 
