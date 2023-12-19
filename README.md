@@ -21,6 +21,7 @@ This repo is organized as follows:
   - `Proposal.pdf`  -  project proposal pdf
   - `Proposal.tex`  -  project proposal latex file
 - `Visualizations/`
+  - `StableThreeBody.ipynb`  -  python notebook containing a stable periodic solution to the Three Body Problem
   - `ThreeBodyVis.ipynb`  -  python notebook where three body problem was visualized with Heun's method
   - `ThreeBodyVis.py`  -  packaged version of `ThreeBodyVis.ipynb`
 
