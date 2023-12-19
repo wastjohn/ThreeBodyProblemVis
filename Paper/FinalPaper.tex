@@ -13,20 +13,57 @@
 \tableofcontents
 \newpage
 \section{Project Overview}
-\subsection{What is the 3-Body Problem?}
-The three body problem is a classic application of Newtonian physics wherein the position and velocity of three bodies at some time are determined by their initial positions and velocities, their masses, and the gravitational constant G.
+\subsection{Introduction}
+The three body problem describes the problem of finding the positions of three objects with individual masses, initial positions, and initial velocities using Newtonian laws of motion and gravity. Unlike two body problems, closed-form solutions do not exist for the three body problem. In our case, this means that the positions of the three bodies must be approximated using numerical methods. In this paper, we will explore numerical solutions to the three body problem in two dimensions using Heun's Method. We will also explore the three body problem in two dimensions with the addition of masses and the gravitational constant $G$.
 
 
 \subsection{Equations}
-Three second-order differential equations can be used to model the three body problem as described by Newtonian mechanics. These equations are as follows:
+Newton's law of universal gravitation states that the gravitational force between two objects is proportional to the product of their masses and inversely proportional to the square of the distance between them. For object one in our system, this can be expressed mathematically as follows:
+\begin{equation}
+    \bm{F_{g,1}} = -G\frac{m_1 m_2}{|\bm{r_{12}}|^2}\bm{\hat{r_{21}}} -G\frac{m_1 m_3}{|\bm{r_{13}}|^2}\bm{\hat{r_{31}}}
+\end{equation}
+where $\bm{F_g}$ is the gravitational force between two objects, $G$ is the gravitational constant, $m_1$ and $m_2$ are the masses of the two objects, and $\bm{r}$ is the distance between the two objects.
+
+The positional vector from one object to the next can be described as the difference in position vectors for the two objects. In other words:
+\begin{equation}
+    \bm{r_{12}} = \bm{r_1} - \bm{r_2}
+\end{equation}
+
+Additionally, the unit vector $\bm{\hat{r}}$ can be expressed as the positional vector divided by its magnitude.
+\begin{equation}
+    \bm{\hat{r}} = \frac{\bm{r}}{|\bm{r}|}
+\end{equation}
+
+Using equations (2) and (3), equation (1) can be rewritten as follows:
+
+\begin{equation}
+    \bm{F_{g,1}} = -Gm_1 m_2\frac{\bm{r_1} - \bm{r_2}}{|\bm{r_1} - \bm{r_2}|^3}-Gm_1 m_3\frac{\bm{r_1} - \bm{r_3}}{|\bm{r_1} - \bm{r_3}|^3}
+\end{equation}
+
+
+Newton's second law of motion states that the acceleration of an object is proportional to the net force acting on it and inversely proportional to its mass. This can be expressed mathematically as follows:
+\begin{equation}
+    \bm{F_{net}} = m\bm{a}
+\end{equation}
+where $F_{net}$ is the net force acting on an object, $m$ is the mass of the object, and $a$ is the acceleration of the object.
+
+Setting equation (5) with $m=m_1$ equal to equation (4) and solving for acceleration yields the following relationship for the acceleration of object one:
 
 \begin{align}
-    \ddot{r_1} &= -Gm_2\frac{r_1-r_2}{|r_1-r_2|^3}-Gm_3\frac{r_1-r_3}{|r_1-r_3|^3}\\
-    \ddot{r_2} &= -Gm_2\frac{r_2-r_1}{|r_2-r_1|^3}-Gm_3\frac{r_2-r_3}{|r_2-r_3|^3}\\
-    \ddot{r_3} &= -Gm_2\frac{r_3-r_1}{|r_3-r_1|^3}-Gm_3\frac{r_3-r_2}{|r_3-r_2|^3}
+    \bm{F_{net,1}} &= \bm{F_{g,1}} \nonumber \\
+    m_1\bm{a_1} &= -Gm_1 m_2\frac{\bm{r_1} - \bm{r_2}}{|\bm{r_1} - \bm{r_2}|^3}-Gm_1 m_3\frac{\bm{r_1} - \bm{r_3}}{|\bm{r_1} - \bm{r_3}|^3}\nonumber \\
+    \bm{a_1} &= -Gm_2\frac{\bm{r_1} - \bm{r_2}}{|\bm{r_1} - \bm{r_2}|^3}-Gm_3\frac{\bm{r_1} - \bm{r_3}}{|\bm{r_1} - \bm{r_3}|^3}
 \end{align}
 
-where $r_1$, $r_2$, and $r_3$ are the positions of the three bodies, $m_1$, $m_2$, and $m_3$ are the masses of the three bodies, and $G$ is the gravitational constant.
+Similar equations can be found for the other two objects in the system.  The result are three second-order differential equations can model the three body problem as described by Newtonian mechanics. These equations are as follows:
+
+\begin{align}
+    \ddot{\bm{r_1}} &= -Gm_2\frac{\bm{r_1}-\bm{r_2}}{|\bm{r_1}-\bm{r_2}|^3}-Gm_3\frac{\bm{r_1}-\bm{r_3}}{|\bm{r_1}-\bm{r_3}|^3}\\
+    \ddot{\bm{r_2}} &= -Gm_1\frac{\bm{r_2}-\bm{r_1}}{|\bm{r_2}-\bm{r_1}|^3}-Gm_3\frac{\bm{r_2}-\bm{r_3}}{|\bm{r_2}-\bm{r_3}|^3}\\
+    \ddot{\bm{r_1}} &= -Gm_1\frac{\bm{r_3}-\bm{r_1}}{|\bm{r_3}-\bm{r_1}|^3}-Gm_2\frac{\bm{r_3}-\bm{r_2}}{|\bm{r_3}-\bm{r_2}|^3}
+\end{align}
+
+where $r_1$, $r_2$, and $r_3$ are the vector positions of the three bodies, $m_1$, $m_2$, and $m_3$ are the masses of the three bodies, and $G$ is the gravitational constant.
 
 \subsection{Simplification}
 To simplify the problem, we assume the following conditions:
