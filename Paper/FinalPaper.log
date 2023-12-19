@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.22)  19 DEC 2023 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.22)  19 DEC 2023 11:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,16 +336,16 @@ Overfull \hbox (106.50099pt too wide) in paragraph at lines 288--288
 []    \OT1/cmtt/m/n/10 """Creates an average of pert perterbations using Heun's method for a particular duration and stepsize.[] 
  []
 
-<Images/averages1to100.png, id=31, 717.6411pt x 715.473pt>
+[6]
+<Images/averages1to100.png, id=34, 717.6411pt x 715.473pt>
 File: Images/averages1to100.png Graphic file (type png)
 <use Images/averages1to100.png>
-Package pdftex.def Info: Images/averages1to100.png  used on input line 296.
+Package pdftex.def Info: Images/averages1to100.png  used on input line 298.
 (pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
-[6]
 <Images/noPerterbations.png, id=36, 717.6411pt x 715.473pt>
 File: Images/noPerterbations.png Graphic file (type png)
 <use Images/noPerterbations.png>
-Package pdftex.def Info: Images/noPerterbations.png  used on input line 303.
+Package pdftex.def Info: Images/noPerterbations.png  used on input line 305.
 (pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
 
 
@@ -354,7 +354,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <Images/perterbations1to4.png, id=37, 717.6411pt x 715.473pt>
 File: Images/perterbations1to4.png Graphic file (type png)
 <use Images/perterbations1to4.png>
-Package pdftex.def Info: Images/perterbations1to4.png  used on input line 310.
+Package pdftex.def Info: Images/perterbations1to4.png  used on input line 312.
 (pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -369,7 +369,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,13n,62p,773b,272s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\qwert\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on FinalPaper.pdf (9 pages, 731918 bytes).
+Output written on FinalPaper.pdf (9 pages, 731975 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
