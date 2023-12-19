@@ -2,16 +2,22 @@
 \contentsline {subsection}{\numberline {1.1}Introduction}{2}{}%
 \contentsline {subsection}{\numberline {1.2}Equations}{2}{}%
 \contentsline {subsection}{\numberline {1.3}Simplification}{3}{}%
-\contentsline {subsection}{\numberline {1.4}Goals}{3}{}%
-\contentsline {section}{\numberline {2}Process}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Code}{3}{}%
-\contentsline {subsubsection}{\numberline {2.1.1}Necessary Packages}{3}{}%
+\contentsline {subsection}{\numberline {1.4}Goals}{4}{}%
+\contentsline {section}{\numberline {2}Process}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Code}{4}{}%
+\contentsline {subsubsection}{\numberline {2.1.1}Necessary Packages}{4}{}%
 \contentsline {subsubsection}{\numberline {2.1.2}Heun's Method}{4}{}%
-\contentsline {subsubsection}{\numberline {2.1.3}Derivative}{5}{}%
-\contentsline {subsubsection}{\numberline {2.1.4}Perterbations}{6}{}%
-\contentsline {subsubsection}{\numberline {2.1.5}Making Plots}{6}{}%
-\contentsline {subsubsection}{\numberline {2.1.6}Making Average Plots}{6}{}%
-\contentsline {subsection}{\numberline {2.2}Adding Masses \& G}{7}{}%
-\contentsline {subsection}{\numberline {2.3}Exploring Collinear Initial Conditions}{8}{}%
-\contentsline {section}{\numberline {3}Results and Discussion}{8}{}%
-\contentsline {section}{\numberline {4}Conclusion}{9}{}%
+\contentsline {subsubsection}{\numberline {2.1.3}Derivative}{6}{}%
+\contentsline {subsubsection}{\numberline {2.1.4}Perterbations}{7}{}%
+\contentsline {subsubsection}{\numberline {2.1.5}Making Plots}{8}{}%
+\contentsline {subsubsection}{\numberline {2.1.6}Making Average Plots}{8}{}%
+\contentsline {subsection}{\numberline {2.2}Adding Masses \& G}{9}{}%
+\contentsline {subsection}{\numberline {2.3}Exploring Collinear Initial Conditions}{10}{}%
+\contentsline {section}{\numberline {3}Results and Discussion}{10}{}%
+\contentsline {section}{\numberline {4}Conclusion}{11}{}%
+\contentsline {section}{\numberline {5}Limitations}{12}{}%
+\contentsline {subsection}{\numberline {5.1}Runtime}{12}{}%
+\contentsline {subsection}{\numberline {5.2}Stable Solutions}{12}{}%
+\contentsline {subsection}{\numberline {5.3}Masses}{13}{}%
+\contentsline {subsection}{\numberline {5.4}Turtle Graphics}{13}{}%
+\contentsline {subsection}{\numberline {5.5}Astronomical Scale}{13}{}%

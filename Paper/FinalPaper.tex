@@ -2,7 +2,7 @@
 \usepackage{bm}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paper=a4paper]{geometry}
+
 
 \graphicspath{ {C:\Users\qwert\OneDrive\Documents\GitHub\ThreeBodyProblemVis\Images\averages1to100.png}}
 \author{Caedan Miller, Kiki Murphy, Will St. John}
@@ -323,5 +323,24 @@ Through many perturbations, we gleaned a variety of insights into the behavior o
 
 
 \section{Conclusion}
+Given our initial conditions, duration, and step size, we concluded that Huen's numerical approximation to the three body problem simplifies into a two body problem, where one body is comprised of two objects engaged in a "dance" about each other, while the other body interacts from a much larger distance.
+
+Solutions also exhibit two forms of symmetry. The first is rotational quadrant symmetry, where the third and fourth quadrants are rotated images of the first and second. The second is local symmetry, where solutions with simial initial conditions in a particular quadrant follow similar paths.
+
+\section{Limitations}
+\subsection{Runtime}
+The runtime of our plots is a function of the number of perturbations, the duration of the simulation and the stepsize. We estimated that creating a single plot of 50 perturbations takes approximately 30 minutes. If we could figure out a more effienct method for creating these plots, we could create more plots and explore more initial conditions.
+
+\subsection{Stable Solutions}
+A Three Body system is a chaotic system. We were limited by this fact as any initial condition we wanted to explore had to be stable. There are a limited number of initial conditions available, so we decided to improvise to save fime and explore collinear initial conditions. We would have like to be able to explore more stable initial conditions.
+
+\subsection{Masses}
+Our plots do not incorporate the masses of the three bodies. We would have liked to incorporate the masses, however, this adds another layer of uncertainty to our Stable Solution problem described above. Not only do the three bodies have to have stable intial positions and velocities, but now the masses of each body interact to a higher degree.
+
+\subsection{Turtle Graphics}
+One of our goals was to create a visualization of the three body problem using turtle graphics. We were able to achieve this, however, the turtle animation was slow, even at its highest setting.
+
+\subsection{Astronomical Scale}
+Another goal of our was to create a visualization of the three body problem on an astronomical scale. We were able to achieve this, however, the scale of the plot was so large that the three bodies were not visible. We would have liked to be able to zoom in on the three bodies, but this was not possible with the turtle graphics, nor our time constaint.
 
 \end{document}
