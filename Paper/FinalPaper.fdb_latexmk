@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1703027500 "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" "FinalPaper.pdf" "FinalPaper" 1703027501 0
+["pdflatex"] 1703028348 "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" "FinalPaper.pdf" "FinalPaper" 1703028350 0
   "C:/Users/qwert/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701915434 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/qwert/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1682280369 11548 c891156161bcdd1b9c26a9519124b595 ""
   "C:/Users/qwert/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1682196044 23178960 851380eca4b80d4babbf78c4ee78ff3e ""
@@ -48,6 +48,8 @@
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb" 1247593067 31099 342ef5a582aacbd3346f3cf4579679fa ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb" 1247593070 39386 0d30f65251ad09eae5335149fa8e6f76 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mkii" 1580390158 71627 94eb9990bed73c364d7f53f960cc8c5b ""
+  "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty" 1643997108 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifvtex.sty" 1643997108 1057 525c2192b5febbd8c1f662c9468335bb ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.cfg" 1616063685 584 2a1075dd71571459f59146da9f7502ad ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty" 1655054589 2222 78b930a5a6e3dc2ac69b78c2057b94d7 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty" 1655054591 4173 c989ee3ced31418e3593916ab26c793a ""
@@ -57,6 +59,8 @@
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/base/article.cls" 1669844196 20144 d5ecf0a5140c8d8d8b72cbe86e320eff ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/base/size10.clo" 1669844196 8448 c33a4e1cb35cee9b33c2b21033b73e39 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1622999586 13886 d1306dcf79a944f6988e688c1785f9ce ""
+  "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.cfg" 1578053545 1104 7ac475a4e3466b0b43e138e9356bda83 ""
+  "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/geometry/geometry.sty" 1578053545 42759 9cf6c5257b1bc7af01a58859749dd37a ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.cfg" 1465890692 1224 978390e9c2234eab29404bc21b268d1e ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/pdftex.def" 1663915090 19448 1e988b341dda20961a6b931bcde55519 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty" 1665063979 18387 8f900a490197ebaf93c02ae9476d4b09 ""
@@ -65,12 +69,14 @@
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665063979 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1680178475 29768 5600b3a98028e2e01b60e7f98fbf4b9c ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1667238666 13231 b52297489a0e9d929aae403417d92a02 ""
-  "FinalPaper.aux" 1703027501 2790 cf0a2a41ba4e3607e46c62f3682df9b8 "pdflatex"
-  "FinalPaper.tex" 1703027498 25323 934c79c750da30947869059115bbee44 ""
-  "FinalPaper.toc" 1703027501 1524 273917b7aa51fdd19e5a07313ac2c2a2 "pdflatex"
+  "FinalPaper.aux" 1703028350 3282 ff9626d62b363968b6a76d4c2b18a06f "pdflatex"
+  "FinalPaper.tex" 1703028347 25991 f647fc59cb3f54a0199d61326fbb73c3 ""
+  "FinalPaper.toc" 1703028350 1522 39de270012a95b66fd84a92035361890 "pdflatex"
+  "Images/averages1to100.png" 1702935394 366244 b6a285eebcd1f78db9dacafb7ab3ce80 ""
+  "Images/longrun.png" 1703007371 256767 bce59de581b57564619a926cce004012 ""
   "Images/noPerterbations.png" 1702936796 70560 469574cb382c603b389995fc599953a9 ""
   "Images/perterbations1to4.png" 1702935547 238153 bca0adaa7096eede4defb8b93c008aaf ""
-  "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" 1703027498 25323 934c79c750da30947869059115bbee44 ""
+  "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" 1703028347 25991 f647fc59cb3f54a0199d61326fbb73c3 ""
   (generated)
   "FinalPaper.aux"
   "FinalPaper.log"

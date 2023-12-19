@@ -2,6 +2,7 @@
 \usepackage{bm}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paper=a4paper]{geometry}
 
 
 \graphicspath{ {C:\Users\qwert\OneDrive\Documents\GitHub\ThreeBodyProblemVis\Images\averages1to100.png}}
@@ -298,34 +299,44 @@ At one point, we wanted to better modify our simulations to account for the mass
 	Additionally, the magnitude of G is so small that any realistic astronomical simulations would have to feature enormous masses and very long distances, two factors that not only make it very difficult to create readable plots but would force us to use more complicated initial velocities when modeling stable conditions. This led us to abandon the idea of accounting for mass and gravity within our main project and stick with our simplified three body problem. 
 
 \subsection{Exploring Collinear Initial Conditions}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/noPerterbations.png}
+    \caption{Numerical solution to the three body problem with no perterbations.}
+    \label{fig:mesh2}
+\end{figure}
+
 Three body systems are already prone to instability, so finding stable three body systems was difficult. In these cases, we discovered that the motion would tend to simplify in one of two ways. The first of these was that the three body system would almost immediately simplify to a two body system, with the third body orbiting the other two. In the other case, two of the three bodies would crash into each other, flinging both of them away from the rest of the system. 
 
 We eventually found that collinear three body systems seemed to be the most stable and less likely to exhibit the behaviors we had noticed before. From looking at resources we were able to find examples of stable three body systems and replicate them in our own code. These examples all used equal masses of 1 and a gravitational constant of 1, and had the initial positions of each body set to (-1, 0), (0, 0), (1, 0), respectively. In these examples, none of the three bodies exhibited chaotic behavior.
 In our modeling of the three body problem we used these same parameters, only changing the initial position of the center body slightly with each iteration to track how the system evolved. We selected these initial positions by writing code that randomly chose points within a sphere centered at the origin with radius 0.1. Since the collinear system we chose was symmetric, we were also able to simplify the code to only selected points from the top half of the sphere, knowing that the motion would be mirrored for initial positions chosen on the bottom half. 
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Images/noPerterbations.png}
-    \caption{a nice plot}
-    \label{fig:mesh2}
-\end{figure}
-
+\newpage
 \section{Results and Discussion}
-Through many perturbations, we gleaned a variety of insights into the behavior of the three body problem under these collinear initial conditions. Firstly, the planet on whichever side is closest to the center planet will be attracted to the center planet and they will spiral around each other, while the third planet will rotate distantly around the other two. Within the shorter time period of most of our plots, it appears that the third planet accelerates off into space, but when we ran one perturbation for a very long time, the third planet remained within the picture the entire time. Thus, the long-term behavior does not indicate the loss of the third planet. 
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/perterbations1to4.png}
-    \caption{a nice plot}
-    \label{fig:mesh3}
+    \caption{Numerical solution to the three body problem with a range of perturbations.}
 \end{figure}
 
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/longrun.png}
+    \caption{Numerical solution to the three body problem with a single perturbation, ran for approximately 20x as long.}
+\end{figure}
+\newpage
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/averages1to100.png}
+    \caption{Numerical solution to the three body problem with 1 to 100 perturbations, averaged together.}
+\end{figure}
 
+Through many perturbations, we gleaned a variety of insights into the behavior of the three body problem under these collinear initial conditions. Firstly, the planet on whichever side is closest to the center planet will be attracted to the center planet and they will spiral around each other, while the third planet will rotate distantly around the other two. Within the shorter time period of most of our plots, it appears that the third planet accelerates off into space, but when we ran one perturbation for a very long time, the third planet remained within the picture the entire time. Thus, the long-term behavior does not indicate the loss of the third planet. 
 
 \section{Conclusion}
 Given our initial conditions, duration, and step size, we concluded that Huen's numerical approximation to the three body problem simplifies into a two body problem, where one body is comprised of two objects engaged in a "dance" about each other, while the other body interacts from a much larger distance.
 
-Solutions also exhibit two forms of symmetry. The first is rotational quadrant symmetry, where the third and fourth quadrants are rotated images of the first and second. The second is local symmetry, where solutions with simial initial conditions in a particular quadrant follow similar paths.
+Solutions also exhibit two forms of symmetry. The first is rotational quadrant symmetry, where the third and fourth quadrants are rotated images of the first and second. The second is local symmetry, where solutions with similar initial conditions in a particular quadrant follow similar paths.
 
 \section{Limitations}
 \subsection{Runtime}
