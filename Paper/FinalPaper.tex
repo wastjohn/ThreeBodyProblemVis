@@ -303,14 +303,6 @@ Three body systems are already prone to instability, so finding stable three bod
 We eventually found that collinear three body systems seemed to be the most stable and less likely to exhibit the behaviors we had noticed before. From looking at resources we were able to find examples of stable three body systems and replicate them in our own code. These examples all used equal masses of 1 and a gravitational constant of 1, and had the initial positions of each body set to (-1, 0), (0, 0), (1, 0), respectively. In these examples, none of the three bodies exhibited chaotic behavior.
 In our modeling of the three body problem we used these same parameters, only changing the initial position of the center body slightly with each iteration to track how the system evolved. We selected these initial positions by writing code that randomly chose points within a sphere centered at the origin with radius 0.1. Since the collinear system we chose was symmetric, we were also able to simplify the code to only selected points from the top half of the sphere, knowing that the motion would be mirrored for initial positions chosen on the bottom half. 
 
-\section{Results and Discussion}
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Images/averages1to100.png}
-    \caption{a nice plot}
-    \label{fig:mesh1}
-\end{figure}
-
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/noPerterbations.png}
@@ -318,12 +310,17 @@ In our modeling of the three body problem we used these same parameters, only ch
     \label{fig:mesh2}
 \end{figure}
 
+\section{Results and Discussion}
+Through many perturbations, we gleaned a variety of insights into the behavior of the three body problem under these collinear initial conditions. Firstly, the planet on whichever side is closest to the center planet will be attracted to the center planet and they will spiral around each other, while the third planet will rotate distantly around the other two. Within the shorter time period of most of our plots, it appears that the third planet accelerates off into space, but when we ran one perturbation for a very long time, the third planet remained within the picture the entire time. Thus, the long-term behavior does not indicate the loss of the third planet. 
+
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.8\textwidth]{Images/perterbations1to4.png}
     \caption{a nice plot}
     \label{fig:mesh3}
 \end{figure}
+
+
 
 \section{Conclusion}
 
