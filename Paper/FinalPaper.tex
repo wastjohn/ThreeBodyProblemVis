@@ -71,9 +71,9 @@ where $r_1$, $r_2$, and $r_3$ are the vector positions of the three bodies, $m_1
 To simplify these three complicated equations, we limited the motion to only two dimensions instead of three. This allowed us to rewrite the equations as a system of six equations: three equations that describe the motion for each body only in the x direction, and three similar equations for the y direction. 
 Equations (1), (2), and (3) can be rewritten as follows:
 \begin{align}
-    \ddot{r_1} &= -\frac{r_1-r_2}{|r_1-r_2|^3}-\frac{r_1-r_3}{|r_1-r_3|^3}\\
-    \ddot{r_2} &= -\frac{r_2-r_1}{|r_2-r_1|^3}-\frac{r_2-r_3}{|r_2-r_3|^3}\\
-    \ddot{r_3} &= -\frac{r_3-r_1}{|r_3-r_1|^3}-\frac{r_3-r_2}{|r_3-r_2|^3}
+    \ddot{\bm{r_1}} &= -\frac{\bm{r_1}-\bm{r_2}}{|\bm{r_1}-\bm{r_2}|^3}-\frac{\bm{r_1}-\bm{r_3}}{|\bm{r_1}-\bm{r_3}|^3}\\
+    \ddot{\bm{r_2}} &= -\frac{\bm{r_2}-\bm{r_1}}{|\bm{r_2}-\bm{r_1}|^3}-\frac{\bm{r_2}-\bm{r_3}}{|\bm{r_2}-\bm{r_3}|^3}\\
+    \ddot{\bm{r_3}} &= -\frac{\bm{r_3}-\bm{r_1}}{|\bm{r_3}-\bm{r_1}|^3}-\frac{\bm{r_3}-\bm{r_2}}{|\bm{r_3}-\bm{r_2}|^3}
 \end{align}
 While these equations are already much more reasonable to work with, three body systems are still incredibly unstable with the added dependence on the mass ratio between the bodies, which influences the motion and can prevent symmetry within the problem. In addition, the gravitational constant that is used in astronomy is such a small number that we have to scale everything up so that there is still an attractive force between the bodies strong enough to influence each other. Because of this, we simplified these six motion equations even further by taking the mass of each body to be 1, and used a gravitational constant of 1. 
 \begin{itemize}
@@ -366,6 +366,6 @@ Our plots do not incorporate the masses of the three bodies. We would have liked
 One of our goals was to create a visualization of the three body problem using turtle graphics. We were able to achieve this, however, the turtle animation was slow, even at its highest setting.
 
 \subsection{Astronomical Scale}
-Another goal of our was to create a visualization of the three body problem on an astronomical scale. We were able to achieve this, however, the scale of the plot was so large that the three bodies were not visible. We would have liked to be able to zoom in on the three bodies, but this was not possible with the turtle graphics, nor our time constaint.
+Another goal of our was to create a visualization of the three body problem on an astronomical scale. We were able to achieve this, however, the scale of the plot was so large that the three bodies were not visible. We would have liked to be able to zoom in on the three bodies, but this was not possible with the turtle graphics, nor our time constraint.
 
 \end{document}

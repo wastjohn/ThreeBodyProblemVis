@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1703028915 "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" "FinalPaper.pdf" "FinalPaper" 1703028917 0
+["pdflatex"] 1703029182 "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" "FinalPaper.pdf" "FinalPaper" 1703029184 0
   "C:/Users/qwert/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1701915434 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/qwert/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1682280369 11548 c891156161bcdd1b9c26a9519124b595 ""
   "C:/Users/qwert/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1682196044 23178960 851380eca4b80d4babbf78c4ee78ff3e ""
@@ -69,14 +69,14 @@
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty" 1665063979 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-pdftex.def" 1680178475 29768 5600b3a98028e2e01b60e7f98fbf4b9c ""
   "C:/Users/qwert/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1667238666 13231 b52297489a0e9d929aae403417d92a02 ""
-  "FinalPaper.aux" 1703028917 3284 191e76345c725aa2dda760af6d243527 "pdflatex"
-  "FinalPaper.tex" 1703028912 27757 6862cf53297427bfd204ee92cae8d9fc ""
-  "FinalPaper.toc" 1703028917 1523 44c8f4d72372f76292be9d2199ba3f3b "pdflatex"
+  "FinalPaper.aux" 1703029184 3284 191e76345c725aa2dda760af6d243527 "pdflatex"
+  "FinalPaper.tex" 1703029181 27893 e9f26e64da855628473a61af95652265 ""
+  "FinalPaper.toc" 1703029184 1523 44c8f4d72372f76292be9d2199ba3f3b "pdflatex"
   "Images/averages1to100.png" 1702935394 366244 b6a285eebcd1f78db9dacafb7ab3ce80 ""
   "Images/longrun.png" 1703007371 256767 bce59de581b57564619a926cce004012 ""
   "Images/noPerterbations.png" 1702936796 70560 469574cb382c603b389995fc599953a9 ""
   "Images/perterbations1to4.png" 1702935547 238153 bca0adaa7096eede4defb8b93c008aaf ""
-  "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" 1703028912 27757 6862cf53297427bfd204ee92cae8d9fc ""
+  "c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex" 1703029181 27893 e9f26e64da855628473a61af95652265 ""
   (generated)
   "FinalPaper.aux"
   "FinalPaper.log"
