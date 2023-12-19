@@ -1,7 +1,10 @@
 \documentclass{article}
 \usepackage{bm}
 \usepackage{amsmath}
+\usepackage{graphicx}
 \usepackage[left=25mm,right=25mm,top=25mm,bottom=25mm,paper=a4paper]{geometry}
+
+\graphicspath{ {C:\Users\qwert\OneDrive\Documents\GitHub\ThreeBodyProblemVis\Images\averages1to100.png}}
 \author{Caedan Miller, Kiki Murphy, Will St. John}
 \title{MATH 312 Final Project Paper}
 
@@ -248,13 +251,28 @@ def generate_avg(pert: int, pos: int, duration: int, stepsize: float) -> None:
 \end{verbatim}
 
 \subsection{Adding Masses \& G}
+
 \subsection{Exploring Collinear Initial Conditions}
 \section{Results and Discussion}
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
-    \includegraphics[width=0.25\textwidth]{mesh}
+    \includegraphics[width=0.8\textwidth]{Images/averages1to100.png}
     \caption{a nice plot}
     \label{fig:mesh1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/noPerterbations.png}
+    \caption{a nice plot}
+    \label{fig:mesh2}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/perterbations1to4.png}
+    \caption{a nice plot}
+    \label{fig:mesh3}
 \end{figure}
 
 \section{Conclusion}

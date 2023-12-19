@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.22)  18 DEC 2023 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.22)  18 DEC 2023 20:50
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -94,12 +94,27 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
-) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
@@ -107,14 +122,14 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@cnth=\count271
 \Gm@cntv=\count272
 \c@Gm@tempcnt=\count273
-\Gm@bindingoffset=\dimen150
-\Gm@wd@mp=\dimen151
-\Gm@odd@mp=\dimen152
-\Gm@even@mp=\dimen153
-\Gm@layoutwidth=\dimen154
-\Gm@layoutheight=\dimen155
-\Gm@layouthoffset=\dimen156
-\Gm@layoutvoffset=\dimen157
+\Gm@bindingoffset=\dimen152
+\Gm@wd@mp=\dimen153
+\Gm@odd@mp=\dimen154
+\Gm@even@mp=\dimen155
+\Gm@layoutwidth=\dimen156
+\Gm@layoutheight=\dimen157
+\Gm@layouthoffset=\dimen158
+\Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks22
  (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
@@ -123,21 +138,39 @@ File: l3backend-pdftex.def 2023-03-30 L3 backend support: PDF output (pdfTeX)
 ) (FinalPaper.aux)
 \openout1 = `FinalPaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+ (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count275
+\scratchdimen=\dimen160
+\scratchbox=\box54
+\nofMPsegments=\count276
+\nofMParguments=\count277
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen161
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks24
+) (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\qwert\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -172,185 +205,173 @@ LaTeX Font Info:    ... okay on input line 8.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-No file FinalPaper.toc.
+(FinalPaper.toc)
 \tf@toc=\write3
 \openout3 = `FinalPaper.toc'.
 
-[1
+ [1
 
 {C:/Users/qwert/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2]
-Overfull \hbox (1.5019pt too wide) in paragraph at lines 118--118
+Overfull \hbox (1.5019pt too wide) in paragraph at lines 121--121
 []    \OT1/cmtt/m/n/10 """Calculatue heuns method for the three body problem for N steps with step size t.[] 
  []
 
 
-Overfull \hbox (59.2514pt too wide) in paragraph at lines 118--118
+Overfull \hbox (59.2514pt too wide) in paragraph at lines 121--121
 []        \OT1/cmtt/m/n/10 p0 (np.array): 12 dimensional vector of initial conditions corresponding to the following:[] 
  []
 
 
-Overfull \hbox (17.25177pt too wide) in paragraph at lines 118--118
+Overfull \hbox (17.25177pt too wide) in paragraph at lines 121--121
 []            \OT1/cmtt/m/n/10 p0[6] = vx1, p0[7] = vx2, p0[8] = vx3, p0[9] = vy1, p0[10] = vy2, p0[11] = vy3[] 
  []
 
 
-Overfull \hbox (33.00163pt too wide) in paragraph at lines 118--118
+Overfull \hbox (33.00163pt too wide) in paragraph at lines 121--121
 []                                \OT1/cmtt/m/n/10 'P3: Y Velocity', 'P1: X Acceleration', 'P2: X Acceleration',[] 
  []
 
 
-Overfull \hbox (54.00145pt too wide) in paragraph at lines 118--118
+Overfull \hbox (54.00145pt too wide) in paragraph at lines 121--121
 []                                \OT1/cmtt/m/n/10 'P3: X Acceleration', 'P1: Y Acceleration', 'P2: Y Acceleration',[] 
  []
 
 
-Overfull \hbox (75.00127pt too wide) in paragraph at lines 118--118
+Overfull \hbox (75.00127pt too wide) in paragraph at lines 121--121
 []        \OT1/cmtt/m/n/10 data = [p0[0], p0[1], p0[2], p0[3], p0[4], p0[5], p0[6], p0[7], p0[8], p0[9], p0[10], p0[11],[] 
  []
 
 
-Overfull \hbox (106.50099pt too wide) in paragraph at lines 118--118
+Overfull \hbox (106.50099pt too wide) in paragraph at lines 121--121
 []            \OT1/cmtt/m/n/10 derivative(p0)[6], derivative(p0)[7], derivative(p0)[8], derivative(p0)[9], derivative(p0)[10],[] 
  []
 
 
-Overfull \hbox (33.00163pt too wide) in paragraph at lines 118--118
+Overfull \hbox (33.00163pt too wide) in paragraph at lines 121--121
 []                                \OT1/cmtt/m/n/10 'P3: Y Velocity', 'P1: X Acceleration', 'P2: X Acceleration',[] 
  []
 
 
-Overfull \hbox (54.00145pt too wide) in paragraph at lines 118--118
+Overfull \hbox (54.00145pt too wide) in paragraph at lines 121--121
 []                                \OT1/cmtt/m/n/10 'P3: X Acceleration', 'P1: Y Acceleration', 'P2: Y Acceleration',[] 
  []
 
 [3]
-Overfull \hbox (59.2514pt too wide) in paragraph at lines 147--147
+Overfull \hbox (59.2514pt too wide) in paragraph at lines 150--150
 []        \OT1/cmtt/m/n/10 p0 (np.array): 12 dimensional vecotr of initial conditions corresponding to the following:[] 
  []
 
 
-Overfull \hbox (17.25177pt too wide) in paragraph at lines 147--147
+Overfull \hbox (17.25177pt too wide) in paragraph at lines 150--150
 []            \OT1/cmtt/m/n/10 p0[6] = vx1, p0[7] = vx2, p0[8] = vx3, p0[9] = vy1, p0[10] = vy2, p0[11] = vy3[] 
  []
 
 
-Overfull \hbox (263.99962pt too wide) in paragraph at lines 147--147
+Overfull \hbox (263.99962pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[6] = - ((p0[0] - p0[1])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) - ((p0[0] - p0[2])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (263.99962pt too wide) in paragraph at lines 147--147
+Overfull \hbox (263.99962pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[7] = - ((p0[1] - p0[0])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) - ((p0[1] - p0[2])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (263.99962pt too wide) in paragraph at lines 147--147
+Overfull \hbox (263.99962pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[8] = - ((p0[2] - p0[0])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - ((p0[2] - p0[1])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (263.99962pt too wide) in paragraph at lines 147--147
+Overfull \hbox (263.99962pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[9] = - ((p0[3] - p0[4])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) - ((p0[3] - p0[5])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (269.24957pt too wide) in paragraph at lines 147--147
+Overfull \hbox (269.24957pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[10] = - ((p0[4] - p0[3])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) - ((p0[4] - p0[5])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (269.24957pt too wide) in paragraph at lines 147--147
+Overfull \hbox (269.24957pt too wide) in paragraph at lines 150--150
 []    \OT1/cmtt/m/n/10 p1[11] = - ((p0[5] - p0[3])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - ((p0[5] - p0[4])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))[] 
  []
 
 
-Overfull \hbox (17.25177pt too wide) in paragraph at lines 202--202
+Overfull \hbox (17.25177pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 """Creates a visualization of the three body problem with pert perturbations. Indended[] 
  []
 
 [4]
-Overfull \hbox (48.7515pt too wide) in paragraph at lines 202--202
+Overfull \hbox (48.7515pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P1: X Position'][0], d['P1: Y Position'][0], c='red', marker='x', label='Earth')[] 
  []
 
 
-Overfull \hbox (48.7515pt too wide) in paragraph at lines 202--202
+Overfull \hbox (48.7515pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P2: X Position'][0], d['P2: Y Position'][0], c='green', marker='x',label='Mars')[] 
  []
 
 
-Overfull \hbox (54.00145pt too wide) in paragraph at lines 202--202
+Overfull \hbox (54.00145pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P3: X Position'][0], d['P3: Y Position'][0], c='blue', marker='x', label='Venus')[] 
  []
 
 
-Overfull \hbox (12.00182pt too wide) in paragraph at lines 202--202
+Overfull \hbox (12.00182pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P1: X Position'], d['P1: Y Position'], c='red', alpha=0.3, label='Earth')[] 
  []
 
 
-Overfull \hbox (17.25177pt too wide) in paragraph at lines 202--202
+Overfull \hbox (17.25177pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P2: X Position'], d['P2: Y Position'], c='green', alpha=0.3, label='Mars')[] 
  []
 
 
-Overfull \hbox (17.25177pt too wide) in paragraph at lines 202--202
+Overfull \hbox (17.25177pt too wide) in paragraph at lines 205--205
 []    \OT1/cmtt/m/n/10 plt.plot(d['P3: X Position'], d['P3: Y Position'], c='blue', alpha=0.3, label='Venus')[] 
  []
 
 
-Overfull \hbox (106.50099pt too wide) in paragraph at lines 248--248
+Overfull \hbox (106.50099pt too wide) in paragraph at lines 251--251
 []    \OT1/cmtt/m/n/10 """Creates an average of pert perterbations using Heun's method for a particular duration and stepsize.[] 
  []
 
 [5]
-c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex:255: Undefined control sequence.
-l.255     \includegraphics
-                          [width=0.25\textwidth]{mesh}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+<Images/averages1to100.png, id=27, 717.6411pt x 715.473pt>
+File: Images/averages1to100.png Graphic file (type png)
+<use Images/averages1to100.png>
+Package pdftex.def Info: Images/averages1to100.png  used on input line 259.
+(pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
+<Images/noPerterbations.png, id=29, 717.6411pt x 715.473pt>
+File: Images/noPerterbations.png Graphic file (type png)
+<use Images/noPerterbations.png>
+Package pdftex.def Info: Images/noPerterbations.png  used on input line 266.
+(pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
 
-c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex:255: Missing number, treated as zero.
-<to be read again> 
-                   ]
-l.255     \includegraphics[width=0.25\textwidth]
-                                                {mesh}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
 
-c:/Users/qwert/OneDrive/Documents/GitHub/ThreeBodyProblemVis/Paper/FinalPaper.tex:255: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   ]
-l.255     \includegraphics[width=0.25\textwidth]
-                                                {mesh}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6] (FinalPaper.aux)
+<Images/perterbations1to4.png, id=30, 717.6411pt x 715.473pt>
+File: Images/perterbations1to4.png Graphic file (type png)
+<use Images/perterbations1to4.png>
+Package pdftex.def Info: Images/perterbations1to4.png  used on input line 273.
+(pdftex.def)             Requested size: 364.19667pt x 363.09598pt.
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- ) 
+[6 <./Images/averages1to100.png>] [7 <./Images/noPerterbations.png>] [8 <./Images/perterbations1to4.png>] (FinalPaper.aux) ) 
 Here is how much of TeX's memory you used:
- 1917 strings out of 476331
- 30392 string characters out of 5787765
+ 2756 strings out of 476331
+ 43669 string characters out of 5787765
  1873660 words of memory out of 5000000
- 22368 multiletter control sequences out of 15000+600000
+ 23170 multiletter control sequences out of 15000+600000
  523084 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,9n,62p,773b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\qwert\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/qwert/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on FinalPaper.pdf (6 pages, 140769 bytes).
+Output written on FinalPaper.pdf (8 pages, 692142 bytes).
 PDF statistics:
- 71 PDF objects out of 1000 (max. 8388607)
+ 86 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

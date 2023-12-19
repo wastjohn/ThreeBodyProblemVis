@@ -14,4 +14,4 @@
 \contentsline {subsection}{\numberline {2.2}Adding Masses \& G}{6}{}%
 \contentsline {subsection}{\numberline {2.3}Exploring Collinear Initial Conditions}{6}{}%
 \contentsline {section}{\numberline {3}Results and Discussion}{6}{}%
-\contentsline {section}{\numberline {4}Conclusion}{6}{}%
+\contentsline {section}{\numberline {4}Conclusion}{7}{}%
