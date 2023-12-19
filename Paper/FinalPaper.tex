@@ -134,9 +134,10 @@ def heun(p0: np.array, N: int, t: float) -> np.array:
         dp0 = derivative(p0)
         dptemp = derivative(ptemp)
         p0 = p0 + t/2 * (dp0 + dptemp)
-        data = [p0[0], p0[1], p0[2], p0[3], p0[4], p0[5], p0[6], p0[7], p0[8], p0[9], p0[10], p0[11], 
-            derivative(p0)[6], derivative(p0)[7], derivative(p0)[8], derivative(p0)[9], derivative(p0)[10], 
-            derivative(p0)[11]]
+        data = [p0[0], p0[1], p0[2], p0[3], p0[4], p0[5], 
+                p0[6], p0[7], p0[8], p0[9], p0[10], p0[11], 
+            derivative(p0)[6], derivative(p0)[7], derivative(p0)[8], 
+            derivative(p0)[9], derivative(p0)[10], derivative(p0)[11]]
         df2 = pd.DataFrame(data=[data], columns=['P1: X Position', 'P2: X Position', 
                                 'P3: X Position', 'P1: Y Position', 'P2: Y Position', 
                                 'P3: Y Position', 'P1: X Velocity', 'P2: X Velocity', 
@@ -184,12 +185,18 @@ def derivative(p0: np.array) -> np.array:
     p1[3] = p0[9]
     p1[4] = p0[10]
     p1[5] = p0[11]
-    p1[6] = - ((p0[0] - p0[1])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) - ((p0[0] - p0[2])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))
-    p1[7] = - ((p0[1] - p0[0])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) - ((p0[1] - p0[2])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))
-    p1[8] = - ((p0[2] - p0[0])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - ((p0[2] - p0[1])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
-    p1[9] = - ((p0[3] - p0[4])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) - ((p0[3] - p0[5])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))
-    p1[10] = - ((p0[4] - p0[3])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) - ((p0[4] - p0[5])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))
-    p1[11] = - ((p0[5] - p0[3])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - ((p0[5] - p0[4])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
+    p1[6] = - ((p0[0] - p0[1])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) 
+            - ((p0[0] - p0[2])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))
+    p1[7] = - ((p0[1] - p0[0])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) 
+            - ((p0[1] - p0[2])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))
+    p1[8] = - ((p0[2] - p0[0])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) 
+            - ((p0[2] - p0[1])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
+    p1[9] = - ((p0[3] - p0[4])/((p0[0]-p0[1])**2+(p0[3]-p0[4])**2)**(3/2)) 
+            - ((p0[3] - p0[5])/((p0[0]-p0[2])**2+(p0[3]-p0[5])**2)**(3/2))
+    p1[10] = - ((p0[4] - p0[3])/((p0[1]-p0[0])**2+(p0[4]-p0[3])**2)**(3/2)) 
+            - ((p0[4] - p0[5])/((p0[1]-p0[2])**2+(p0[4]-p0[5])**2)**(3/2))
+    p1[11] = - ((p0[5] - p0[3])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) 
+            - ((p0[5] - p0[4])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
     return p1
 \end{verbatim}
 When we first started thinking through how we were going to solve Heun’s Method for these two systems of 12 equations, we were overwhelmed by how complicated this seemed. In our first attempts we tried to use Heun’s Method in two dimensions and then somehow solve for the extra variables what we knew about physics. Ultimately we didn’t get very far with this approach. The problem became much more simple when we started thinking of these 12 differential equations that seemed to all depend on each other as less of a system of equations and more as a set of independent points that made up one big vector. By changing our perspective, we were also able to incorporate what we know about Newtonian physics to relate the time-independent acceleration equations to the position and velocity values we cared about, something we were not able to do before. This also allowed us to simplify Heun’s Method to only depend on one variable instead of two, which both made the code shorter and made the three body problem easier to understand. 
@@ -251,7 +258,8 @@ def perterbations(N: int) -> list:
 \subsubsection{Making Average Plots}
 \begin{verbatim}
 def generate_avg(pert: int, pos: int, duration: int, stepsize: float) -> None:
-    """Creates an average of pert perterbations using Heun's method for a particular duration and stepsize.
+    """Creates an average of pert perterbations using Heun's method 
+    for a particular duration and stepsize.
 
     Args:
         pert (int): number of perterbations to plot
