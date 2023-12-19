@@ -66,13 +66,8 @@ Similar equations can be found for the other two objects in the system.  The res
 where $r_1$, $r_2$, and $r_3$ are the vector positions of the three bodies, $m_1$, $m_2$, and $m_3$ are the masses of the three bodies, and $G$ is the gravitational constant.
 
 \subsection{Simplification}
-To simplify the problem, we assume the following conditions:
-\begin{itemize}
-    \item The three bodies only move in two dimensions.
-    \item The three bodies are of equal mass $m_1 = m_2 = m_3 = 1$.
-    \item The gravitational constant $G = 1$.
-\end{itemize}
 
+To simplify these three complicated equations, we limited the motion to only two dimensions instead of three. This allowed us to rewrite the equations as a system of six equations: three equations that describe the motion for each body only in the x direction, and three similar equations for the y direction. 
 Equations (1), (2), and (3) can be rewritten as follows:
 \begin{align}
     \ddot{r_1} &= -\frac{r_1-r_2}{|r_1-r_2|^3}-\frac{r_1-r_3}{|r_1-r_3|^3}\\
@@ -185,7 +180,7 @@ def derivative(p0: np.array) -> np.array:
     p1[11] = - ((p0[5] - p0[3])/((p0[2]-p0[0])**2+(p0[5]-p0[3])**2)**(3/2)) - ((p0[5] - p0[4])/((p0[2]-p0[1])**2+(p0[5]-p0[4])**2)**(3/2))
     return p1
 \end{verbatim}
-
+When we first started thinking through how we were going to solve Heun’s Method for these two systems of 12 equations, we were overwhelmed by how complicated this seemed. In our first attempts we tried to use Heun’s Method in two dimensions and then somehow solve for the extra variables what we knew about physics. Ultimately we didn’t get very far with this approach. The problem became much more simple when we started thinking of these 12 differential equations that seemed to all depend on each other as less of a system of equations and more as a set of independent points that made up one big vector. By changing our perspective, we were also able to incorporate what we know about Newtonian physics to relate the time-independent acceleration equations to the position and velocity values we cared about, something we were not able to do before. This also allowed us to simplify Heun’s Method to only depend on one variable instead of two, which both made the code shorter and made the three body problem easier to understand. 
 \subsubsection{Perterbations}
 \begin{verbatim}
 def perterbations(N: int) -> list:
@@ -290,7 +285,10 @@ def generate_avg(pert: int, pos: int, duration: int, stepsize: float) -> None:
 \subsection{Adding Masses \& G}
 
 \subsection{Exploring Collinear Initial Conditions}
-Talk about stable colinear solutions found online
+Three body systems are already prone to instability, so finding stable three body systems was difficult. In these cases, we discovered that the motion would tend to simplify in one of two ways. The first of these was that the three body system would almost immediately simplify to a two body system, with the third body orbiting the other two. In the other case, two of the three bodies would crash into each other, flinging both of them away from the rest of the system. 
+
+We eventually found that collinear three body systems seemed to be the most stable and less likely to exhibit the behaviors we had noticed before. From looking at resources we were able to find examples of stable three body systems and replicate them in our own code. These examples all used equal masses of 1 and a gravitational constant of 1, and had the initial positions of each body set to (-1, 0), (0, 0), (1, 0), respectively. In these examples, none of the three bodies exhibited chaotic behavior.
+In our modeling of the three body problem we used these same parameters, only changing the initial position of the center body slightly with each iteration to track how the system evolved. We selected these initial positions by writing code that randomly chose points within a sphere centered at the origin with radius 0.1. Since the collinear system we chose was symmetric, we were also able to simplify the code to only selected points from the top half of the sphere, knowing that the motion would be mirrored for initial positions chosen on the bottom half. 
 
 \section{Results and Discussion}
 \begin{figure}[h!]
